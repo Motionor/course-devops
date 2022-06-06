@@ -1,3 +1,1 @@
 # course-devops
-
-## Local setup
