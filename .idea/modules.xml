@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/course-devops.iml" filepath="$PROJECT_DIR$/.idea/course-devops.iml" />
+      <module fileurl="file://$PROJECT_DIR$/modules/javascript/javascript.iml" filepath="$PROJECT_DIR$/modules/javascript/javascript.iml" />
+      <module fileurl="file://$PROJECT_DIR$/modules/php/php.iml" filepath="$PROJECT_DIR$/modules/php/php.iml" />
     </modules>
   </component>
 </project>
