@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/modules/javascript/javascript.iml" filepath="$PROJECT_DIR$/modules/javascript/javascript.iml" />
       <module fileurl="file://$PROJECT_DIR$/modules/php/php.iml" filepath="$PROJECT_DIR$/modules/php/php.iml" />
       <module fileurl="file://$PROJECT_DIR$/modules/python/python.iml" filepath="$PROJECT_DIR$/modules/python/python.iml" />
+      <module fileurl="file://$PROJECT_DIR$/modules/ruby/ruby.iml" filepath="$PROJECT_DIR$/modules/ruby/ruby.iml" />
     </modules>
   </component>
 </project>

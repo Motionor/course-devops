@@ -9,6 +9,6 @@ RUN composer install --ignore-platform-reqs
 # Copy all other sources
 COPY . .
 # Opening container port to host system
-EXPOSE 8000
+EXPOSE 7000
 # Define initial command to start webserver
 CMD ["composer", "run", "start"]
