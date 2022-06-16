@@ -65,6 +65,7 @@
         "preferred-install": {
             "*": "dist"
         },
+        "process-timeout": 0,
         "sort-packages": true
     },
     "autoload": {
@@ -83,13 +84,11 @@
         "symfony/polyfill-php72": "*"
     },
     "scripts": {
+        "start": "php -S 0.0.0.0:8000 -t public",
         "auto-scripts": {
             "cache:clear": "symfony-cmd",
             "assets:install %PUBLIC_DIR%": "symfony-cmd"
         },
-        "post-install-cmd": [
-            "@auto-scripts"
-        ],
         "post-update-cmd": [
             "@auto-scripts"
         ]
