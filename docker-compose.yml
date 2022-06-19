@@ -1,0 +1,16 @@
+services:
+
+  frontend:
+    container_name: frontend
+    build:
+      context: modules/frontend
+    ports:
+      - 3000:3000
+
+  backend:
+    container_name: backend
+    build:
+      context: modules/backend
+    ports:
+      - 8000:8000
+
