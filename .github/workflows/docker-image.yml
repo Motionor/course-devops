@@ -1,0 +1,51 @@
+name: Docker build and push
+
+on: 
+  pull_request:
+    branches: 
+      - 'latest'
+
+jobs:
+  docker_frontend:
+    runs-on: ubuntu-latest
+    steps:
+      -
+        name: Checkout
+        uses: actions/checkout@v3
+      
+      -
+        name: Login to GitHub
+        uses: docker/login-action@v2
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.MY_TOKEN }}
+      -
+        name: Build and push
+        uses: docker/build-push-action@v3
+        with:
+          context: modules/frontend
+          push: true
+          tags: ghcr.io/hive-school/course-devops:frontend
+          
+  docker_backend:
+    runs-on: ubuntu-latest
+    steps:
+      -
+        name: Checkout
+        uses: actions/checkout@v3
+
+      -
+        name: Login to GitHub
+        uses: docker/login-action@v2
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.MY_TOKEN }}
+      -
+        name: Build and push
+        uses: docker/build-push-action@v3
+        with:
+          context: modules/backend
+          push: true
+          tags: ghcr.io/hive-school/course-devops:backend 
