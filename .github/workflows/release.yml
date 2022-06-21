@@ -1,0 +1,25 @@
+on:
+  workflow_dispatch:
+
+name: Release
+
+jobs:
+
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: update frontend container
+        uses: appleboy/ssh-action@master
+        env:
+          DOCKER_USERNAME: ${{ github.actor }}
+          DOCKER_PASSWORD: ${{ secrets.MY_TOKEN }}
+        with:
+          host: ${{ secrets.PRODUCTION_DOMAIN }}
+          username: root
+          key: ${{ secrets.SSH_PRIVATE }}
+          port: 22
+          envs: DOCKER_USERNAME,DOCKER_PASSWORD
+          script: |
+            docker login ghcr.io --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+            docker run --pull=always -it -d --rm -p 80:3000 --name frontend ghcr.io/hive-school/course-devops:frontend
+            docker run --pull=always -it -d --rm -p 8000:8000 --name backend ghcr.io/hive-school/course-devops:backend
