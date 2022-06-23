@@ -21,7 +21,9 @@ jobs:
           envs: DOCKER_USERNAME,DOCKER_PASSWORD
           script: |
             docker login ghcr.io --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+            docker stop frontend
             docker run --pull=always -it -d --rm -p 80:3000 --name frontend ghcr.io/hive-school/course-devops:frontend
+            docker stop backend
             docker run --pull=always -it -d --rm -p 8000:8000 --name backend ghcr.io/hive-school/course-devops:backend
       - name: send telegram message on push
         uses: appleboy/telegram-action@master
