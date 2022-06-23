@@ -8,7 +8,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: update frontend container
+      - name: update containers
         uses: appleboy/ssh-action@master
         env:
           DOCKER_USERNAME: ${{ github.actor }}
