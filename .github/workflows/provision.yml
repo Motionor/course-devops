@@ -1,0 +1,19 @@
+name: Infrastructure provision
+
+on:
+  push:
+    paths:
+      - "**/*.tf"
+    branches:
+      - latest
+
+jobs:
+  terraform:
+    name: Terraform infrastructure provision
+    runs-on: ubuntu-latest
+    env:
+      TF_VAR_digitalocean_token: ${{ secrets.DIGITALOCEAN_TOKEN }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
