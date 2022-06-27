@@ -1,7 +1,7 @@
+name: Release
+
 on:
   workflow_dispatch:
-
-name: Release
 
 jobs:
 
@@ -37,3 +37,4 @@ jobs:
             Repository: ${{ github.repository }}
 
             See changes: https://github.com/${{ github.repository }}/commit/${{github.sha}}
+

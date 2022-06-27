@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Symfony2PluginSettings">
+    <option name="pathToTranslation" value="modules/backend/var/cache/dev/translations" />
+    <option name="directoryToWeb" value="modules/backend/public" />
+    <option name="directoryToApp" value="modules/backend/app" />
+    <option name="pluginEnabled" value="true" />
+    <option name="profilerCsvPath" value="" />
+    <option name="containerFiles">
+      <list>
+        <container_file path="modules/backend/var/cache/dev/App_KernelDevDebugContainer.xml" />
+      </list>
+    </option>
+  </component>
+</project>
