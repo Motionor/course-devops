@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="dataSourceStorageLocal" created-in="IU-222.3153.4">
+  <component name="dataSourceStorageLocal" created-in="IU-221.5080.210">
     <data-source name="Django default" uuid="a97a5ab4-3cfd-4033-8465-cc0e8f1330be">
       <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="SQLITE" exact-version="0" />
       <schema-mapping />
