@@ -1,0 +1,12 @@
+documentation:
+  - any: [ '**/*.md' ]
+
+infrastructure:
+  - any: [ 'Dockerfile', 'helmfile.yaml', 'skaffold.yaml', 'docker-compose.yml', '**/*.tf' ]
+
+frontend:
+  - any: [ 'modules/frontend/**/*', '!modules/frontend/Dockerfile' ]
+
+backend:
+  - any: [ 'modules/backend/**/*', '!modules/backend/Dockerfile' ]
+
