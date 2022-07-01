@@ -1,16 +1,16 @@
 services:
 
-  frontend:
-    container_name: frontend
+  javascript:
+    container_name: javascript
     build:
-      context: modules/frontend
+      context: modules/javascript
     ports:
       - 3000:3000
 
-  backend:
-    container_name: backend
+  php:
+    container_name: php
     build:
-      context: modules/backend
+      context: modules/php
     ports:
-      - 8000:8000
+      - 7000:7000
 

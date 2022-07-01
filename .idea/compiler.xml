@@ -11,5 +11,10 @@
         <module name="java.main" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="java" target="18" />
+      <module name="java.main" target="18" />
+      <module name="java.test" target="18" />
+    </bytecodeTargetLevel>
   </component>
 </project>
