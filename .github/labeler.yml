@@ -2,7 +2,7 @@ documentation:
   - any: [ '**/*.md' ]
 
 infrastructure:
-  - any: [ 'Dockerfile', 'helmfile.yaml', 'skaffold.yaml', 'docker-compose.yml', '**/*.tf' ]
+  - any: [ 'modules/*/Dockerfile', 'helmfile.yaml', 'skaffold.yaml', 'docker-compose.yml', '**/*.tf' ]
 
 frontend:
   - any: [ 'modules/javascript/**/*', '!modules/javascript/Dockerfile' ]
