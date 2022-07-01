@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JsonSchemaMappingsProjectConfiguration">
+    <state>
+      <map>
+        <entry key="Course Configuration">
+          <value>
+            <SchemaInfo>
+              <option name="name" value="Course Configuration" />
+              <option name="relativePathToSchema" value="jar://$APPLICATION_PLUGINS_DIR$/EduTools/lib/EduTools-2022.5-2022.1-343.jar!/yaml/course-schema.json" />
+              <option name="schemaVersion" value="JSON Schema version 7" />
+              <option name="applicationDefined" value="true" />
+              <option name="patterns">
+                <list>
+                  <Item>
+                    <option name="path" value="course-info.yaml" />
+                  </Item>
+                </list>
+              </option>
+            </SchemaInfo>
+          </value>
+        </entry>
+      </map>
+    </state>
+  </component>
+</project>

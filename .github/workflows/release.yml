@@ -1,0 +1,40 @@
+name: Release
+
+on:
+  workflow_dispatch:
+
+jobs:
+
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: update containers
+        uses: appleboy/ssh-action@master
+        env:
+          DOCKER_USERNAME: ${{ github.actor }}
+          DOCKER_PASSWORD: ${{ secrets.MY_TOKEN }}
+        with:
+          host: ${{ secrets.PRODUCTION_DOMAIN }}
+          username: root
+          key: ${{ secrets.SSH_PRIVATE }}
+          port: 22
+          envs: DOCKER_USERNAME,DOCKER_PASSWORD
+          script: |
+            docker login ghcr.io --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+            docker stop frontend
+            docker run --pull=always -it -d --rm -p 80:3000 --name frontend ghcr.io/hive-school/course-devops:frontend
+            docker stop backend
+            docker run --pull=always -it -d --rm -p 8000:8000 --name backend ghcr.io/hive-school/course-devops:backend
+      - name: send telegram message on push
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.CHAT_ID }}
+          token: ${{ secrets.TELEGRAM_TOKEN }}
+          message: |
+            ${{ github.actor }} created commit:
+            Commit message: ${{ github.event.commits[0].message }}
+
+            Repository: ${{ github.repository }}
+
+            See changes: https://github.com/${{ github.repository }}/commit/${{github.sha}}
+

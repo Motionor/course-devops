@@ -52,3 +52,9 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
+# Environment
+.env
+
+# Terraform
+.auto.tfvars
+.terraform
