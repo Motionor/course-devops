@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/modules/backend/backend.iml" filepath="$PROJECT_DIR$/modules/backend/backend.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/course-devops.iml" filepath="$PROJECT_DIR$/.idea/course-devops.iml" />
-      <module fileurl="file://$PROJECT_DIR$/modules/frontend/frontend.iml" filepath="$PROJECT_DIR$/modules/frontend/frontend.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/java.main.iml" filepath="$PROJECT_DIR$/.idea/modules/java.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/modules/javascript/javascript.iml" filepath="$PROJECT_DIR$/modules/javascript/javascript.iml" />
+      <module fileurl="file://$PROJECT_DIR$/modules/php/php.iml" filepath="$PROJECT_DIR$/modules/php/php.iml" />
+      <module fileurl="file://$PROJECT_DIR$/modules/python/python.iml" filepath="$PROJECT_DIR$/modules/python/python.iml" />
+      <module fileurl="file://$PROJECT_DIR$/modules/ruby/ruby.iml" filepath="$PROJECT_DIR$/modules/ruby/ruby.iml" />
     </modules>
   </component>
 </project>

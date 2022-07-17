@@ -1,0 +1,8 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="start:php" type="ComposerRunConfigurationType" factoryName="Composer Script">
+    <option name="commandLineParameters" value="" />
+    <option name="pathToComposerJson" value="$PROJECT_DIR$/modules/php/composer.json" />
+    <option name="script" value="start" />
+    <method v="2" />
+  </configuration>
+</component>
