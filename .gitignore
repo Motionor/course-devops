@@ -58,3 +58,7 @@ Temporary Items
 # Terraform
 .auto.tfvars
 .terraform
+
+# IDE
+.idea/dataSources
+.idea/jpa-buddy.xml

@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/course-devops.iml" filepath="$PROJECT_DIR$/.idea/course-devops.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/java.iml" filepath="$PROJECT_DIR$/.idea/modules/java.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/java.main.iml" filepath="$PROJECT_DIR$/.idea/modules/java.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/java.test.iml" filepath="$PROJECT_DIR$/.idea/modules/java.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/modules/javascript/javascript.iml" filepath="$PROJECT_DIR$/modules/javascript/javascript.iml" />
       <module fileurl="file://$PROJECT_DIR$/modules/php/php.iml" filepath="$PROJECT_DIR$/modules/php/php.iml" />
       <module fileurl="file://$PROJECT_DIR$/modules/python/python.iml" filepath="$PROJECT_DIR$/modules/python/python.iml" />

@@ -2,13 +2,21 @@ FROM gradle:7.4.1 AS build
 
 WORKDIR /usr/local/src
 
-RUN .gradlew
+COPY gradlew gradlew
+
+COPY ./gradle ./gradle
+
+COPY ./.gradle ./.gradle
+
+RUN ./gradlew
 
 COPY . .
 
+RUN ./gradlew build
+
 EXPOSE 8080
 
-CMD .gradlew bootRun
+CMD ./gradlew bootRun
 
 RUN mkdir /app
 

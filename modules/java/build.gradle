@@ -6,7 +6,7 @@ plugins {
 
 group = 'com.hiberbee'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '18'
+sourceCompatibility = "17"
 
 configurations {
     compileOnly {
@@ -32,3 +32,4 @@ dependencies {
 tasks.named('test') {
     useJUnitPlatform()
 }
+targetCompatibility = JavaVersion.VERSION_17
